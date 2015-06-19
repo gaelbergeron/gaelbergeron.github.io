@@ -1,0 +1,70 @@
+html {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background-color: #d5f4fa;
+}
+
+.navbar {
+	font-size: 1.5em;
+	display: inline-block;
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+#logo-button {
+	float: left;
+	margin-right: 4.5em;
+	font-size: 2em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+#portfolio {
+	display: inline-block;
+	margin-right: 4em;
+	margin-bottom: 0.5em;
+	margin-top: 2em;
+}
+
+#blog {
+	margin-right: 4em;
+}
+
+#about-me {
+	margin-right: 4em;
+}
+#main-section {
+display: inline-block;
+}
+
+#description {
+  background-color: white;
+  float: left;
+  position: absolute;
+  width: 19em;
+  height: 30.25em;
+  top: 7.08em;
+  opacity: 0.7;
+  margin-left: -10px;
+  padding: 1em;
+}
+
+#picture {
+	max-width: 1500px;
+	margin-left: -10px;
+}
+#twitter {
+	margin-right: 4.8em;
+}
+#linkedin {
+	margin-right: 4.8em;
+}
+#github {
+	margin-right: 4.8em;
+}
+#instagram {
+	margin-right: 4.8em;
+}
+#soundcloud {
+	margin-right: 4.8em;
+}
