@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+
+	<title>g10n Blog Index</title>	
+  </head>
+  <body>
+       <section class="navbar">
+        <a href="index.html" id="logo-button">g10n</a>
+        <a href="#" id="portfolio">Portfolio</a>
+        <a href="blog-index.html" id="blog">Blog</a>
+        <a href="#" id="about-me">About me</a>
+      </section>
+<main>
+  <h1>Relative, absolute and fixed: your CSS "ahah" moment</h1>
+  <h2>How to make you CSS feel comfortable</h2>
+  <h4>June 19th, 2015</h4>
+
+  <section>
+    <p>
+      Week #2 at Dev Bootcamp was all about HTML & CSS. Well, when it comes to starting from scratch, it's especially about CSS, which was to me more tricky to understand. There are several key concepts to grasp before really mastering the stylesheet. Chief among these is the notion of positioning, more precisely the difference between relative, absolute and fixed.
+    </p>
+    <p>
+        <strong>Relative.</strong> The usage of the word 'relative' per-se can be a little confusing. The element actually has a relative position to: itself, if we don't specify any positioning attribute the blocks will be placed right below their parent in static position, see image #1. But the minute we start playing with those positioning attribute we can move the box around as if we were working in Office PowerPoint, see image #2. 
+    </p>
+        <img src="blog-images/image1.png" width="466" height="300" />
+        <figcaption><i>Image #1. - The 3 blocks are all in relative position, they appear one after the other.</i></figcaption>
+        <p></p>
+        <img src="blog-images/image2.png" width="508" height="300" />
+        <figcaption><i>Image #2. - The 3 blocks are still in relative position, but have been given left and top positioning attributes.</i></figcaption>
+    <p>
+        <strong>Absolute.</strong> The absolute position can seem as the most powerful and convenient to use. The principle is simple: the box will default on the position of it's immediate parent that as a relative or absolute position and will only go where we inscruct it to, see image #3 & #4. To move the element we simply have to use the position attributes. Note that if there is no parent around the element will go all the way to the top, which corresponds to the html element. User-friendly but not recommended since the position of the element becomes independant of any other, which limits the display flexibility. Something more and more problematic in an all-responsive era.
+    </p>
+        <img src="blog-images/image3.png" width="514" height="300" />
+        <figcaption><i>Image #3. - Here we kept the positioning attributes but block 3 is set on absolute, it went all the way up. </i></figcaption>
+        <p></p>
+        <img src="blog-images/image4.png" width="429" height="300" />
+        <figcaption><i>Image #4. - Here block 3 has been set as a child of block 2, since we kept the same positioning it moved up and left from block 2.</i></figcaption>
+    <p>
+        <strong>Fixed.</strong> The fixed position can be seen as the absolute-one-step-further. A fixed element will never move, even if we scroll it stays in place. A number of website have such feature for their header, where you can keep scrolling down but the top menu stays fixed. From what I understand so far this feature needs to be heavily tested, it reduces the effective browsing area of a page, which can be inconvenient on smaller mobile screens.
+    </p>
+     <p>
+        I hope the distinction is a little clearer for you know. As I mentioned earlier, CSS is not as straightforward as HTML. It takes a lot of practice and discipline to avoid falling in the trap of easy but not flexible styling.
+    </p>
+    <p>As usual, I would love to get your feedback on this post. All the buttons are right below, no excuse!</p> 
+    <p>Happy coding!</p>
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+      <section id="footer">
+        <a href="https://twitter.com/gaelbergeron" target="_blank"><img src="social-icons/twitter.png" id="twitter" width=60px height=60px /></a>
+        <a href="https://www.linkedin.com/in/gaelbergeron" target="_blank"><img src="social-icons/linkedin.png" id="linkedin" width=60px height=60px /></a>
+        <a href="https://github.com/gaelbergeron" target="_blank"><img src="social-icons/github.png" id="github" width=60px height=60px /></a>
+        <a href="https://instagram.com/gramgael/" target="_blank"><img src="social-icons/instagram.png" id="instagram" width=60px height=60px /></a>
+        <a href="https://soundcloud.com/bergui" target="_blank"><img src="social-icons/soundcloud.png" id="soundcloud" width=60px height=60px /></a>
+        <a href="mailto:gael.bergeron@gmail.com" target="_blank"><img src="social-icons/email.png" id="email" width=60px height=60px /></a>
+      </section>
+  </body>
+</html>
