@@ -17,3 +17,9 @@ img {
 .some-space {
   height: 10px;
 }
+
+#office {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
