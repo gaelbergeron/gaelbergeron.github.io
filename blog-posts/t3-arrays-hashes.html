@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css">
+
+
+	<title>g10n Blog Index</title>	
+  </head>
+  <body>
+       <section class="navbar">
+        <a href="../index.html" id="logo-button">g10n</a>
+        <a href="#" id="portfolio">Portfolio</a>
+        <a href="../blog-index.html" id="blog">Blog</a>
+        <a href="#" id="about-me">About me</a>
+      </section>
+<main>
+ <div id="placeholder"></div>
+  <h1>Storing Data: arrays vs. hashes</h1>
+  <h2>Clash of the titans</h2>
+  <h4>June 26th, 2015</h4>
+
+  <section>
+    <p>
+      Time is flying by! Already week 3 of Phase 0 coming to an end! Week 1 was all about Git, GitHub and getting comfy with the command line. HTML & CSS were running the show during week 2, but things got more back-end this week with an introduction to Ruby. </br>The Ruby language has been around since the '90s and is often considered to be the most elegant, human-friendly and powerful. Great websites and platforms such as Shopify, SoundCloud and GitHub are built on Ruby! One of the most important aspect of the language is in how data and information is stored. Storing and managing data properly is crucial, SoundCloud features millions of songs, without a proper back-end we couldn't hear what we want so easily. At the heart of storing data: <strong>arrays and hashes</strong>. 
+    </p>
+    <p>
+        Arrays and hashes both serve the same purpose: storing information. In Ruby we talk about 'objects', so arrays and hashes can store any kind of objects: strings, integers and even arrays. In both cases objects are indexed with a key, meaning they can be accessed using a key. 
+    </p>
+    
+    <h3>Arrays</h3>
+    <p>
+        An array is the simplest way to store objects, they are always indexed by integers, ordered in numerical order. See below: 
+        <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">array</span> <span style="color: #f92672">=</span> <span style="color: #f92672">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;cat&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">[</span><span style="color: #ae81ff">23</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;coin-coin&#39;</span><span style="color: #f92672">]]</span>   <span style="color: #75715e"># arrays always use square brackets</span>
+
+<span style="color: #75715e"># access the second element by calling it using the integer</span>
+<span style="color: #75715e"># note that the first element starts with 0</span>
+
+<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">array</span> <span style="color: #f92672">[</span><span style="color: #ae81ff">1</span><span style="color: #f92672">]</span>
+<span style="color: #e6db74">&#39;cat&#39;</span>
+
+
+<span style="color: #75715e"># how to create a new array</span>
+
+<span style="color: #66d9ef">new</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">array</span> <span style="color: #f92672">=</span> <span style="color: #f92672">[</span><span style="color: #e6db74">&#39;coin-coin&#39;</span><span style="color: #f92672">]</span>
+</pre></div>
+    </p>
+  
+  <div class="some-space"></div>
+
+    <h3>Hashes</h3>
+
+    <p>
+        Hashes are a little more elaborated and offer more flexibility, instead of being indexed by integers, they can be indexed using any kind of object, such as strings. The applications are endless, imagine you want to store a list of songs based on the artists profile, it would look something like this:
+        <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">hash</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span>                                            <span style="color: #75715e"># hashes use braces</span>
+    <span style="color: #e6db74">:&#39;Boy Boy Boy&#39;</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&#39;Andhim&#39;</span>
+    <span style="color: #e6db74">:&#39;Sympathy For The Devil&#39;</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&#39;The Rolling Stones&#39;</span>
+    <span style="color: #e6db74">:&#39;Hausch&#39;</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&#39;Andhim&#39;</span>
+    <span style="color: #e6db74">:&#39;Nemesis&#39;</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&#39;Benjamin Clementine&#39;</span>
+    <span style="color: #e6db74">:&#39;Lady Jane&#39;</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&#39;The Rolling Stones&#39;</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #75715e"># values can be accessed using square brackets</span>
+
+<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">hash</span><span style="color: #f92672">[</span> <span style="color: #e6db74">&#39;Lady Jane&#39;</span> <span style="color: #f92672">]</span>
+<span style="color: #e6db74">&#39;The Rolling Stones&#39;</span>
+
+
+
+<span style="color: #75715e"># how to create a new hash</span>
+
+<span style="color: #f8f8f2">songs</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Hash</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span>
+<span style="color: #f8f8f2">songs</span><span style="color: #f92672">[</span><span style="color: #e6db74">:&#39;song a&#39;</span><span style="color: #f92672">]</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;artist a&#39;</span>
+<span style="color: #f8f8f2">songs</span><span style="color: #f92672">[</span><span style="color: #e6db74">:&#39;song b&#39;</span><span style="color: #f92672">]</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;artist b&#39;</span>
+</pre></div>
+    </p>
+    <p>
+      Put simply: an array is a simpler version of a hash, since it can only be indexed using integers. I'm excited to start using these tools and get a deeper understanding of their real-life applications! As usual, feedback is more than welcome!
+    </p>
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+      <section id="footer">
+        <a href="https://twitter.com/gaelbergeron" target="_blank"><img src="../social-icons/twitter.png" id="twitter" width=60px height=60px /></a>
+        <a href="https://www.linkedin.com/in/gaelbergeron" target="_blank"><img src="../social-icons/linkedin.png" id="linkedin" width=60px height=60px /></a>
+        <a href="https://github.com/gaelbergeron" target="_blank"><img src="../social-icons/github.png" id="github" width=60px height=60px /></a>
+        <a href="https://instagram.com/gramgael/" target="_blank"><img src="../social-icons/instagram.png" id="instagram" width=60px height=60px /></a>
+        <a href="https://soundcloud.com/bergui" target="_blank"><img src="../social-icons/soundcloud.png" id="soundcloud" width=60px height=60px /></a>
+        <a href="mailto:gael.bergeron@gmail.com" target="_blank"><img src="../social-icons/email.png" id="email" width=60px height=60px /></a>
+      </section>
+  </body>
+</html>

@@ -10,13 +10,10 @@
   padding: 1em;
 }
 
-#placeholder {
-	width: 1000px;
-	height: 32.25em;
-	top: 7.08em;
-  	margin-left: -10px;
-}
-
 img {
   display:inline-block
+}
+
+.some-space {
+  height: 10px;
 }
