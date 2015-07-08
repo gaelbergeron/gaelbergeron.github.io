@@ -57,6 +57,11 @@ display: inline-block;
 	max-width: 1500px;
 	margin-left: -10px;
 }
+
+#footer {
+	margin-top: 1em;
+}
+
 #twitter {
 	margin-right: 4.8em;
 }
