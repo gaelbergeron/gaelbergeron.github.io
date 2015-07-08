@@ -57,3 +57,16 @@ background-color: #e8eef0;
   height: 20em;
   padding-top: 0.8em;
   padding-left: 0.5em;
+}
+
+/*a:link {
+    color: #FE5F55;
+}*/
+
+#blog-link {
+    color: #FE5F55;
+}
+
+/*#blog-link a:hover {
+    color: #FE5F55;
+}*/
