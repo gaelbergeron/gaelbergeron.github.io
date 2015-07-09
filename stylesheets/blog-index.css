@@ -58,15 +58,21 @@ background-color: #e8eef0;
   padding-top: 0.8em;
   padding-left: 0.5em;
 }
-
-/*a:link {
-    color: #FE5F55;
-}*/
-
-#blog-link {
-    color: #FE5F55;
+#technical-body a:link {
+  color: #96E072;
 }
-
-/*#blog-link a:hover {
-    color: #FE5F55;
-}*/
+#cultural-body a:link {
+  color: #96E072;
+}
+#technical-body a:visited {
+  color: #FE5F55;
+}
+#cultural-body a:visited {
+  color: #FE5F55;
+}
+#technical-body a:hover {
+  color: yellow;
+}
+#cultural-body a:hover {
+  color: yellow;
+}
