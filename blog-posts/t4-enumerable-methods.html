@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css">
+
+  
+	<title>g10n Blog Index</title>	
+  </head>
+  <body>
+       <section class="navbar">
+        <a href="../index.html" id="logo-button">g10n</a>
+        <a href="#" id="portfolio">Portfolio</a>
+        <a href="../blog-index.html" id="blog">Blog</a>
+        <a href="#" id="about-me">About me</a>
+      </section>
+<main id="main">
+ <div id="placeholder"></div>
+  <h1>The cycle method in Ruby</h1>
+  <h2>Ridin' cyclin' chillin' </h2>
+  <h4>July 10th, 2015</h4>
+
+  <section>
+    <p>
+After 4 weeks of phase 0 at Dev Bootcamp, I can officially declare that I’m awesome at Ruby. Ok, I’m getting a little carried away here. The mountain is high, and the more I learn the taller it gets. To avoid a panic attack I’ll take a step back and try to explain as well as possible one method. Baby steps they say. So today is about the cycle method, part of the module of enumerables.
+    </p>
+    <h3>Ridin’ chillin'</h3>
+    <p>
+This is how we could recap enumerables, it’s a family of methods that will apply an action to data contained in hashes and arrays. They are tremendously useful when processing datasets: updating artists information in your favorite playlist (iTunes is for losers, I prefer Sublime) or going through a series of fields in a form. 
+    </p>
+    <h3>Cyclin'</h3>
+    <p>
+In the spirit of enumerable the cycle method will literally cycle through an array (or hash) and do what you will instruct it to do in the code block. If you don’t specify anything it will do it forever, but you can also state a number of cycles. See below.
+    </p>
+        <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">a</span> <span style="color: #f92672">=</span> <span style="color: #f92672">[</span><span style="color: #e6db74">&quot;Jackson 5&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;Drake&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;Mika&quot;</span><span style="color: #f92672">]</span>
+        <span style="color: #f8f8f2">a</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cycle</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">x</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">x</span> <span style="color: #f8f8f2">}</span>  <span style="color: #75715e"># print, Jackson 5, Drake, Mika, Jackson 5, Drake, Mika,.. forever.</span>
+        <span style="color: #f8f8f2">a</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cycle(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">x</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">x</span> <span style="color: #f8f8f2">}</span>  <span style="color: #75715e"># print, Jackson 5, Drake, Mika, Jackson 5, Drake, Mika.</span>
+</pre></div>
+    <h3>Example of application</h3>
+    <p>
+You are in charge of the sign up process of the latest trendy app. You want to make sure that all the fields are filled out, the cycle method is perfect to help you display a message in case one of the field is left unfilled, assuming you are using a hash with x as the name of the fields and y as the value of the field:
+    </p>
+        <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">hash</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cycle(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">x,y</span><span style="color: #f92672">|</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">y</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">empty?</span> <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;Hey, some information is missing! You don&#39;t get to be trendy until you&#39;ve properly filled out this form!&quot;</span><span style="color: #f8f8f2">}</span>
+</pre></div>
+    <p>
+And boom, you’re on your way to making millions!
+    </p>
+
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+      <section id="footer">
+        <a href="https://twitter.com/gaelbergeron" target="_blank"><img src="../social-icons/twitter.png" id="twitter" width=60px height=60px /></a>
+        <a href="https://www.linkedin.com/in/gaelbergeron" target="_blank"><img src="../social-icons/linkedin.png" id="linkedin" width=60px height=60px /></a>
+        <a href="https://github.com/gaelbergeron" target="_blank"><img src="../social-icons/github.png" id="github" width=60px height=60px /></a>
+        <a href="https://instagram.com/gramgael/" target="_blank"><img src="../social-icons/instagram.png" id="instagram" width=60px height=60px /></a>
+        <a href="https://soundcloud.com/bergui" target="_blank"><img src="../social-icons/soundcloud.png" id="soundcloud" width=60px height=60px /></a>
+        <a href="mailto:gael.bergeron@gmail.com" target="_blank"><img src="../social-icons/email.png" id="email" width=60px height=60px /></a>
+      </section>
+  </body>
+</html>

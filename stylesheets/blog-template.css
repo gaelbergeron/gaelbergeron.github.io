@@ -1,3 +1,8 @@
+#main {
+ margin-right: 8em;
+ margin-left: 8em; 
+}
+
 #description {
   background-color: white;
   float: left;
@@ -22,4 +27,8 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+figcaption {
+  font-size: 75%;
 }
