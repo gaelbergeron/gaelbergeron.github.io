@@ -28,6 +28,11 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+#spongebob {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 figcaption {
   font-size: 75%;

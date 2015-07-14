@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css">
+
+  
+	<title>g10n Blog Index</title>	
+  </head>
+  <body>
+       <section class="navbar">
+        <a href="../index.html" id="logo-button">g10n</a>
+        <a href="#" id="portfolio">Portfolio</a>
+        <a href="../blog-index.html" id="blog">Blog</a>
+        <a href="#" id="about-me">About me</a>
+      </section>
+<main id="main">
+ <div id="placeholder"></div>
+  <h1>A first look at Ruby classes</h1>
+  <h2>You got class or you don't</h2>
+  <h4>July 14th, 2015</h4>
+
+  <section>
+  <img id="spongebob" src="../blog-images/spongebob-figureset.jpg" width="350" height="350" alt="Spongebob Figure set" />
+
+    <p>
+      Week-5 at Dev Bootcamp is our third week studying Ruby, focusing on classes.</br> To me, understanding the concept of classes is also grasping the whole potential of Ruby as a language to build applications. As you know, Ruby is object-oriented, which means that everything you work with is an object with specific properties and behaviours, like in real life an object can be a car, a book or even a SpongeBob figure. Objects sharing the same properties and behaviours are grouped under the same class of objects. In other words, you can say that an object from a specific class is an instance of that class.  
+    </p>
+    <p>
+        To drive the point home here is how we would work with the SpongeBob figure set class
+    </p>
+    <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.3em .3em .3em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Spongebob_figureset</span>
+
+    <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">initialize</span><span style="color: #f8f8f2">(character_name,</span> <span style="color: #f8f8f2">specie,</span> <span style="color: #f8f8f2">role,</span> <span style="color: #f8f8f2">key_quote)</span>
+    <span style="color: #f8f8f2">@character_name</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">character</span> <span style="color: #f8f8f2">name</span>
+    <span style="color: #f8f8f2">@specie</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">specie</span>
+    <span style="color: #f8f8f2">@role</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">role</span>
+    <span style="color: #f8f8f2">@key_quote</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">key_quote</span>
+    <span style="color: #66d9ef">end</span>
+
+    <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">print</span>
+    <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">@character_name</span>
+    <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">@specie</span>
+    <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">@role</span>
+    <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">@key_quote</span>
+    <span style="color: #66d9ef">end</span>
+    </pre></div>
+
+    <p>
+      In this code we have initialized a new class called Spongebob_figureset, a class always start with the initialize method, which sets the properties of an object of that class, also called instance of the class. In short, properties spell the defining traits of an instance, or what it takes to create a fully capable object belonging to the class. In this example an object is created using four arguments: <i>character_name, specie, role, key_quote</i>.
+    </p>
+    <p>
+      After the initialize method, we can declare other methods that will define behaviours specific to the class, these methods are called class method or instance method. Above, the second instance method we define is print. When this method is called on an instance of the Spongebob_figureset Class, it prints the figure info to the console, as illustrated below.
+    </p>
+    <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.3em .3em .3em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">squidward</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Spongebob_figureset</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new(</span><span style="color: #e6db74">&quot;Squidward Q. Tentacles&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;Octopus&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;cashier of the Krusty Krab&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;No, Patrick, mayonnaise is not an instrument.&quot;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">squidward</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">print</span>
+
+    <span style="color: #f8f8f2">Squidward Q. Tentacles</span>
+    <span style="color: #f8f8f2">Octopus</span>
+    <span style="color: #f8f8f2">cashier of the Krusty Krab</span>
+    <span style="color: #f8f8f2">No, Patrick, mayonnaise is not an instrument.</span>
+    </pre></div>
+
+    <p>
+      We could have developed a whole suite of methods to obtain specific behaviours for the class. That’s how we can start grasping the concept of classes for applications. Let’s move to another example: an application like Groupon, which was developed in Ruby, could create a Class named <strong>deals</strong>, that would be initialized with arguments like  <strong>category</strong>, <strong>provider</strong>, <strong>discount</strong>, <strong>#deals_available</strong>. Whenever the number of deals available needs to be updated, we could write a specific method that will destructively change the variable (i.e. change it permanently).
+    </p>
+    <p>
+      I hope this was helpful! As usual, I would love to get in touch, use the icons below!
+    </p>
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+      <section id="footer">
+        <a href="https://twitter.com/gaelbergeron" target="_blank"><img src="../social-icons/twitter.png" id="twitter" width=60px height=60px /></a>
+        <a href="https://www.linkedin.com/in/gaelbergeron" target="_blank"><img src="../social-icons/linkedin.png" id="linkedin" width=60px height=60px /></a>
+        <a href="https://github.com/gaelbergeron" target="_blank"><img src="../social-icons/github.png" id="github" width=60px height=60px /></a>
+        <a href="https://instagram.com/gramgael/" target="_blank"><img src="../social-icons/instagram.png" id="instagram" width=60px height=60px /></a>
+        <a href="https://soundcloud.com/bergui" target="_blank"><img src="../social-icons/soundcloud.png" id="soundcloud" width=60px height=60px /></a>
+        <a href="mailto:gael.bergeron@gmail.com" target="_blank"><img src="../social-icons/email.png" id="email" width=60px height=60px /></a>
+      </section>
+  </body>
+</html>
