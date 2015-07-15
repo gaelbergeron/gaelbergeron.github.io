@@ -77,3 +77,21 @@ display: inline-block;
 #soundcloud {
 	margin-right: 4.8em;
 }
+
+#young-gael {
+	position: relative;
+}
+
+#about-me {
+	position: relative;
+	top: 0em;
+	bottom: 0em;
+	right: 0em;
+	left: 0em;
+	width: 100%;
+}
+
+#main-about-me {
+	margin-right: 8em;
+ 	margin-left: 8em; 
+}
