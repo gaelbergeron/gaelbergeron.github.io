@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css">
+
+  
+	<title>g10n Blog Index</title>	
+  </head>
+  <body>
+       <section class="navbar">
+        <a href="../index.html" id="logo-button">g10n</a>
+        <a href="#" id="portfolio">Portfolio</a>
+        <a href="../blog-index.html" id="blog">Blog</a>
+        <a href="about-me.html" id="about-me">About me</a>
+      </section>
+<main id="main-about-me">
+ <div id="placeholder"></div>
+  <h1>Blocs, procs and lambdas in Ruby</h1>
+  <h2>Can you repeat please?</h2>
+  <h4>July 21st, 2015</h4>
+
+  <section>
+    <p>
+Blocks, procs and lambdas are different types of closures in Ruby. In human language it simply refers to ways of repeating code. Blocks are usually well understood but procs and lambdas can be more mysterious. Hopefully this little explanation will help.
+    </p>
+    <h4>Blocs</h4>
+    <p>
+They allow us to apply a specific code to a series of elements. They are recognizable under 2 forms, using {} or do…end.
+    </p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.3em .3em .3em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">array</span> <span style="color: #f92672">=</span> <span style="color: #f92672">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">4</span><span style="color: #f92672">]</span>
+
+<span style="color: #f8f8f2">array</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cycle</span> <span style="color: #66d9ef">do</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">n</span><span style="color: #f92672">|</span>
+  <span style="color: #f8f8f2">n</span><span style="color: #f92672">*</span><span style="color: #ae81ff">2</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e"># =&gt; [1, 4, 6, 8]</span>
+</pre></div>
+
+    <p>
+So, what happens here?
+<ol>
+<li>First, we send the cycle method to an Array with a block of code (you remember the <a href="t4-enumerable-methods.html" target="cycle blog post"> cycle method, right?</a>)</li>
+<li>The code block interacts with a variable used within the cycle method (n in this case) and multiple it by 2.</li>
+<li>Each element inside the array is now doubled.</li>
+</ol>
+    </p>
+
+<h4>Procs</h4>
+    <p>
+Blocs are great but what if we want to use the same bloc in several parts of a well-respected DRY code? We use procs! Procs are like blocks but can be saved and reused later in the code.
+    </p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.3em .3em .3em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">array</span> <span style="color: #f92672">=</span> <span style="color: #f92672">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">4</span><span style="color: #f92672">]</span>
+
+<span style="color: #f8f8f2">p</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Proc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">n</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">n</span><span style="color: #f92672">*</span><span style="color: #ae81ff">2</span> <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">array</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">each(</span><span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">p)</span>
+
+<span style="color: #75715e"># =&gt; [1, 4, 6, 8]</span>
+</pre></div>
+    <p>
+So, what happens here?
+<ol>
+<li>First, we create a proc  using Proc.new and write the block to be saved.</li>
+<li>The proc is then called on a method using &p.</li>
+<li>Each element inside the array is now doubled.</li>
+</ol>
+    </p>
+<h4>Lambdas</h4>
+    <p>
+Procs and lambdas are very similar and are often used interchangeably. There are 2 main differences between both. First, procs do not check for the number of arguments when lambdas do, here is how it looks:
+    </p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.4em .4em .4em .9em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">lam</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">lambda</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">x</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">x</span> <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">proc</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Proc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">x</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">x</span> <span style="color: #f8f8f2">}</span>
+
+<span style="color: #f8f8f2">lam</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>                <span style="color: #75715e"># prints out 1</span>
+<span style="color: #f8f8f2">proc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>               <span style="color: #75715e"># prints out 1</span>
+
+<span style="color: #f8f8f2">lam</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call</span>                   <span style="color: #75715e"># ArgumentError: wrong number of arguments (0 for 1)</span>
+<span style="color: #f8f8f2">proc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call</span>                  <span style="color: #75715e"># returns nil</span>
+
+<span style="color: #f8f8f2">lam</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>            <span style="color: #75715e"># ArgumentError: wrong number of arguments (3 for 1)</span>
+<span style="color: #f8f8f2">proc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">)</span>           <span style="color: #75715e"># prints out 1 and forgets about the extra arguments</span>
+</pre></div>
+    <p>
+The second difference is that procs and lambdas treat return differently. While proc return will only work at the first method and return the value provided, lambdas will return their value and continue through the rest of the code.
+    </p>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.4em .4em .4em .9em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">lambda</span>
+  <span style="color: #f8f8f2">lambda</span> <span style="color: #f8f8f2">{</span> <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;Block string&quot;</span> <span style="color: #f8f8f2">}</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call</span>
+  <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;method is finished&quot;</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">proc</span>
+  <span style="color: #66d9ef">Proc</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span> <span style="color: #f8f8f2">{</span> <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;Block string&quot;</span><span style="color: #f8f8f2">}</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">call</span>
+  <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&quot;method is finished&quot;</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">lambda</span>          <span style="color: #75715e"># =&gt; Block string</span>
+<span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">proc</span>            <span style="color: #75715e"># =&gt; method is finished</span>
+</pre></div>
+
+    <p>
+This second difference makes procs more difficult to work with than lambdas, Ruby experts usually recommend working with the latter. I’m writing about these concepts as I’m learning about them, so as usual any feedback is more than welcome!
+    </p>
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+      <section id="footer">
+        <a href="https://twitter.com/gaelbergeron" target="_blank"><img src="../social-icons/twitter.png" id="twitter" width=60px height=60px /></a>
+        <a href="https://www.linkedin.com/in/gaelbergeron" target="_blank"><img src="../social-icons/linkedin.png" id="linkedin" width=60px height=60px /></a>
+        <a href="https://github.com/gaelbergeron" target="_blank"><img src="../social-icons/github.png" id="github" width=60px height=60px /></a>
+        <a href="https://instagram.com/gramgael/" target="_blank"><img src="../social-icons/instagram.png" id="instagram" width=60px height=60px /></a>
+        <a href="https://soundcloud.com/bergui" target="_blank"><img src="../social-icons/soundcloud.png" id="soundcloud" width=60px height=60px /></a>
+        <a href="mailto:gael.bergeron@gmail.com" target="_blank"><img src="../social-icons/email.png" id="email" width=60px height=60px /></a>
+      </section>
+  </body>
+</html>
