@@ -37,3 +37,21 @@ img {
 figcaption {
   font-size: 75%;
 }
+
+h3.resume {
+  margin-top: 3em;
+  margin-bottom-bottom: 2em;
+}
+h4.resume {
+  margin-top: 0em;
+  margin-bottom: -1em;
+}
+h4#resume {
+  margin-top: 1.1em;
+  margin-bottom: -1em;
+}
+p.resume {
+  margin-top: -1em;
+  margin-bottom: 2em;
+  font-size: 95%;
+}
