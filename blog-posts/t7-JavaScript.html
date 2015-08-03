@@ -23,31 +23,35 @@
 
   <section>
     <p>
-    Week 7 at Dev Bootcamp was about another object oriented programming language: JavaScript. JavaScript is similar to Ruby in many ways, though their main usage differ: JavaScript is the reference for software animation and interactivity, when Ruby is used as a back-end language. Regardless of their purpose, they both need to store and process data. A few weeks ago we discussed <a href="t3-arrays-hashes.html" id="">arrays and hashes</a>, this week we will see how Ruby's hashes are very similar to JavaScript's objects. 
+    Week 7 at Dev Bootcamp was about another object oriented programming language: JavaScript. JavaScript is similar to Ruby in many ways, though their main usage differ: JavaScript is the reference for software animation and interactivity, when Ruby is used as a back-end language. Regardless of their purpose, they both need to store and process data. A few weeks ago we discussed <a href="t3-arrays-hashes.html" id="post-link">arrays and hashes</a>, this week we will see how Ruby's hashes are very similar to JavaScript's objects. 
     </p>
     <h3>The Ruby hash</h3>
     <p>
     In Ruby, we have 2 main ways to create hashes:
     </p>
-    music_implicit_form = {
-      "Michael Jackson" => "Beat it",
-      "Arcade Fire" => "The well and the lighthouse",
-      "Billy Paul" => "Your song",
-      "Drake" => "Know yourself"
-    }
+    <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.8em 0.8em 0.8em .9em;padding:.8em .8em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">music_implicit_form</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span>
+      <span style="color: #e6db74">&quot;Michael Jackson&quot;</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Beat it&quot;</span><span style="color: #f8f8f2">,</span>
+      <span style="color: #e6db74">&quot;Arcade Fire&quot;</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;The well and the lighthouse&quot;</span><span style="color: #f8f8f2">,</span>
+      <span style="color: #e6db74">&quot;Billy Paul&quot;</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Your song&quot;</span><span style="color: #f8f8f2">,</span>
+      <span style="color: #e6db74">&quot;Drake&quot;</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Know yourself&quot;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #f8f8f2">}</span>
 
-    music_alternate_form = {
-      Michael_Jackson: "Beat it",
-      Arcade_Fire: "The well and the lighthouse",
-      Billy_Paul: "Your song",
-      Drake: "Know yourself"
-    } 
+    <span style="color: #f8f8f2">music_alternate_form</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span>
+      <span style="color: #66d9ef">Michael_Jackson</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;Beat it&quot;</span><span style="color: #f8f8f2">,</span>
+      <span style="color: #66d9ef">Arcade_Fire</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;The well and the lighthouse&quot;</span><span style="color: #f8f8f2">,</span>
+      <span style="color: #66d9ef">Billy_Paul</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;Your song&quot;</span><span style="color: #f8f8f2">,</span>
+      <span style="color: #e6db74">Drake</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;Know yourself&quot;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #f8f8f2">}</span> 
+</pre></div>
+
     <p>
     In the first form the keys are strings, as you already know they could be any other kind of objects: integer, array and so forth. In the second form the strings are used as symbols. </br>
     To add or modify items to either of these forms we can type:
     </p>
-    music_implicit_form["2pac"] = "changes"
-    music_alternate_form[:2pac] = "changes"
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.8em 0.8em 0.8em .9em;padding:.8em .8em;"><pre style="margin: 0; line-height: 125%">    <span style="color: #f8f8f2">music_implicit_form</span><span style="color: #f92672">[</span><span style="color: #e6db74">&quot;2pac&quot;</span><span style="color: #f92672">]</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;changes&quot;</span>
+    <span style="color: #f8f8f2">music_alternate_form</span><span style="color: #f92672">[</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">pac</span><span style="color: #f92672">]</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;changes&quot;</span>
+</pre></div>
+
     <p>
     To display values, we could also do it 2 ways:
     </p>
@@ -81,7 +85,7 @@
     console.log(music_alternate_form.arcadeFire);
     // In the backseat
     <p>
-    Outside of syntax, objects and hashes have remarkably similar features, they can both be modified, printed and stored within a variable. They also feature built-in methods that make our life as developers easier, for more resource on that you should check out the <a href="" id="">Ruby Doc</a> and the <a href="developer.mozilla.org/en/JavaScript/Guide" id="">Mozilla Developer Network</a>. I hope this was useful, happy coding!
+    Outside of syntax, objects and hashes have remarkably similar features, they can both be modified, printed and stored within a variable. They also feature built-in methods that make our life as developers easier, for more resource on that you should check out the <a href="">Ruby Doc</a> and the <a href="developer.mozilla.org/en/JavaScript/Guide">Mozilla Developer Network</a>. I hope this was useful, happy coding!
     </p>
       <!-- copy and paste as many sections as you want to add paragraphs -->
   </section>

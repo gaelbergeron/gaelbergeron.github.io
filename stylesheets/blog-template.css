@@ -55,3 +55,15 @@ p.resume {
   margin-bottom: 2em;
   font-size: 95%;
 }
+
+p a:link {
+  color: #96E072;
+}
+
+p a:visited {
+  color: #FE5F55;
+}
+
+p a:hover {
+  color: black;
+}
