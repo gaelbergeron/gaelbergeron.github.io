@@ -18,18 +18,18 @@
 <main id="main-about-me">
  <div id="placeholder"></div>
   <h1>Ruby vs. JavaScript: a first look at data structures</h1>
-  <h2>The subtitle, if you want it</h2>
+  <h2>Hash vs. object</h2>
   <h4>July 31st, 2015</h4>
 
   <section>
     <p>
-    Week 7 at Dev Bootcamp was about another object oriented programming language: JavaScript. JavaScript is similar to Ruby in many ways, though their main usage differ: JavaScript is the reference for software animation and interactivity, when Ruby is used as a back-end language. Regardless of their purpose, they both need to store and process data. A few weeks ago we discussed <a href="t3-arrays-hashes.html" id="post-link">arrays and hashes</a>, this week we will see how Ruby's hashes are very similar to JavaScript's objects. 
+    Week 7 at Dev Bootcamp was about another object oriented programming language: JavaScript. JavaScript is similar to Ruby in many ways, though their main usage differ, to keep it simple: JavaScript is the reference for software animation and interactivity, whereas Ruby is used as a back-end language. Regardless of their purpose, they both need to store and process data. A few weeks ago we discussed <a href="t3-arrays-hashes.html" id="post-link">arrays and hashes</a>, this week we will see how Ruby's hashes are very similar to JavaScript's objects. 
     </p>
     <h3>The Ruby hash</h3>
     <p>
     In Ruby, we have 2 main ways to create hashes:
     </p>
-    <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.8em 0.8em 0.8em .9em;padding:.8em .8em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">music_implicit_form</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span>
+      <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.8em 0.8em 0.8em .9em;padding:.8em .8em;"><pre style="margin: 0; line-height: 125%">   <span style="color: #f8f8f2">music_implicit_form</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span>
       <span style="color: #e6db74">&quot;Michael Jackson&quot;</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Beat it&quot;</span><span style="color: #f8f8f2">,</span>
       <span style="color: #e6db74">&quot;Arcade Fire&quot;</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;The well and the lighthouse&quot;</span><span style="color: #f8f8f2">,</span>
       <span style="color: #e6db74">&quot;Billy Paul&quot;</span> <span style="color: #f92672">=&gt;</span> <span style="color: #e6db74">&quot;Your song&quot;</span><span style="color: #f8f8f2">,</span>
@@ -40,12 +40,12 @@
       <span style="color: #66d9ef">Michael_Jackson</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;Beat it&quot;</span><span style="color: #f8f8f2">,</span>
       <span style="color: #66d9ef">Arcade_Fire</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;The well and the lighthouse&quot;</span><span style="color: #f8f8f2">,</span>
       <span style="color: #66d9ef">Billy_Paul</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;Your song&quot;</span><span style="color: #f8f8f2">,</span>
-      <span style="color: #e6db74">Drake</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;Know yourself&quot;</span><span style="color: #f8f8f2">,</span>
+      <span style="color: #66d9ef">Drake</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;Know yourself&quot;</span><span style="color: #f8f8f2">,</span>
     <span style="color: #f8f8f2">}</span> 
-</pre></div>
+  </pre></div>
 
     <p>
-    In the first form the keys are strings, as you already know they could be any other kind of objects: integer, array and so forth. In the second form the strings are used as symbols. </br>
+    In the first form the keys are strings, but they could be any other kind of object: integer, array and so forth. In the second form the keys are symbols. </br>
     To add or modify items to either of these forms we can type:
     </p>
 <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.8em 0.8em 0.8em .9em;padding:.8em .8em;"><pre style="margin: 0; line-height: 125%">    <span style="color: #f8f8f2">music_implicit_form</span><span style="color: #f92672">[</span><span style="color: #e6db74">&quot;2pac&quot;</span><span style="color: #f92672">]</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;changes&quot;</span>
@@ -55,37 +55,42 @@
     <p>
     To display values, we could also do it 2 ways:
     </p>
-    puts music_implicit_form["Arcade Fire"]
-    puts music_implicit_form[:Arcade_Fire]]
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.8em 0.8em 0.8em .9em;padding:.8em .8em;"><pre style="margin: 0; line-height: 125%">    <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">music_implicit_form</span><span style="color: #f92672">[</span><span style="color: #e6db74">&quot;Arcade Fire&quot;</span><span style="color: #f92672">]</span>
+    <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">music_implicit_form</span><span style="color: #f92672">[</span><span style="color: #e6db74">:Arcade_Fire</span><span style="color: #f92672">]</span>
 
-    // The well and the lighthouse
-    // The well and the lighthouse
+    <span style="color: #75715e"># The well and the lighthouse</span>
+    <span style="color: #75715e"># The well and the lighthouse</span>
+</pre></div>
 
     <h3>The JavaScript object</h3>
     <p>
-    Objects offer the same features in JavaScript. An object literal is a series of properties, keys in Ruby, and associated values of an object, enclosed in curly braces {}. Here is how it looks:
+    Objects offer the same features in JavaScript. An object literal is a series of properties, keys in Ruby, and associated values of an object, enclosed in curly braces { }. Here is how it looks:
     </p>
-    var music_alternate_form = {
-      michaelJackson: "Beat it",
-      arcadeFire: "The well and the lighthouse",
-      billyPaul: "Your song",
-      Drake: "Know yourself"
-    };
+      <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.8em 0.8em 0.8em .9em;padding:.8em .8em;"><pre style="margin: 0; line-height: 125%">    <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">music_alternate_form</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span>
+      <span style="color: #a6e22e">michaelJackson</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;Beat it&quot;</span><span style="color: #f8f8f2">,</span>
+      <span style="color: #a6e22e">arcadeFire</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;The well and the lighthouse&quot;</span><span style="color: #f8f8f2">,</span>
+      <span style="color: #a6e22e">billyPaul</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;Your song&quot;</span><span style="color: #f8f8f2">,</span>
+      <span style="color: #a6e22e">Drake</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&quot;Know yourself&quot;</span>
+    <span style="color: #f8f8f2">};</span>
+  </pre></div>
+
     <p>
-    Notice here that an object is also a variable and always to be starte with 'var', also the closing curly brace must be followed by a semi-column. As stated earlier in the post: JavaScript is tough on syntax. </br>
+    Notice here that an object is also a variable and always to be started with 'var', also the closing curly brace must be followed by a semi-column: yes, JavaScript is tough on syntax. </br>
     Another important difference is that the keys can be any data type in Ruby, but this is not the case in JavaScript. In JS the properties are considered variables and must follow the required syntax.
     </p>
     <p>
     To add properties to our JS object or display current values, we would go like this:
     </p>
-    console.log(music_alternate_form.arcadeFire);
-    // The well and the lighthouse
+    <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.8em 0.8em 0.8em .9em;padding:.8em .8em;"><pre style="margin: 0; line-height: 125%">    <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: white">log</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">music_alternate_form</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">arcadeFire</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #75715e">// The well and the lighthouse</span>
 
-    music_alternate_form.arcadeFire = "In the backseat";
-    console.log(music_alternate_form.arcadeFire);
-    // In the backseat
+    <span style="color: #a6e22e">music_alternate_form</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">arcadeFire</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;In the backseat&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: white">log</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">music_alternate_form</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">arcadeFire</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #75715e">// In the backseat</span>
+  </pre></div>
+
     <p>
-    Outside of syntax, objects and hashes have remarkably similar features, they can both be modified, printed and stored within a variable. They also feature built-in methods that make our life as developers easier, for more resource on that you should check out the <a href="">Ruby Doc</a> and the <a href="developer.mozilla.org/en/JavaScript/Guide">Mozilla Developer Network</a>. I hope this was useful, happy coding!
+    Outside of syntax, objects and hashes have remarkably similar features, they can both be modified, printed and stored within a variable. They also feature built-in methods that make our life as developers easier, for more resource on that check out the <a href="http://ruby-doc.org/core-2.0.0/">Ruby Doc</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Developer Network</a>. I hope this was useful, happy coding!
     </p>
       <!-- copy and paste as many sections as you want to add paragraphs -->
   </section>
