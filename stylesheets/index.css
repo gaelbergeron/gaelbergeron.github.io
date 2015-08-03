@@ -95,3 +95,11 @@ display: inline-block;
 	margin-right: 8em;
  	margin-left: 8em; 
 }
+
+#smiirl {
+  position: relative;
+  left: 21em;
+  right: 0em;
+  top: -18.8em;
+  bottom: 0em;
+}
