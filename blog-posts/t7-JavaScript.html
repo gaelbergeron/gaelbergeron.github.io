@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css">
+
+  
+	<title>g10n Blog Index</title>	
+  </head>
+  <body>
+       <section class="navbar">
+        <a href="../index.html" id="logo-button">g10n</a>
+        <a href="#" id="portfolio">Portfolio</a>
+        <a href="../blog-index.html" id="blog">Blog</a>
+        <a href="about-me.html" id="about-me">About me</a>
+      </section>
+<main id="main-about-me">
+ <div id="placeholder"></div>
+  <h1>Ruby vs. JavaScript: a first look at data structures</h1>
+  <h2>The subtitle, if you want it</h2>
+  <h4>July 31st, 2015</h4>
+
+  <section>
+    <p>
+    Week 7 at Dev Bootcamp was about another object oriented programming language: JavaScript. JavaScript is similar to Ruby in many ways, though their main usage differ: JavaScript is the reference for software animation and interactivity, when Ruby is used as a back-end language. Regardless of their purpose, they both need to store and process data. A few weeks ago we discussed <a href="t3-arrays-hashes.html" id="">arrays and hashes</a>, this week we will see how Ruby's hashes are very similar to JavaScript's objects. 
+    </p>
+    <h3>The Ruby hash</h3>
+    <p>
+    In Ruby, we have 2 main ways to create hashes:
+    </p>
+    music_implicit_form = {
+      "Michael Jackson" => "Beat it",
+      "Arcade Fire" => "The well and the lighthouse",
+      "Billy Paul" => "Your song",
+      "Drake" => "Know yourself"
+    }
+
+    music_alternate_form = {
+      Michael_Jackson: "Beat it",
+      Arcade_Fire: "The well and the lighthouse",
+      Billy_Paul: "Your song",
+      Drake: "Know yourself"
+    } 
+    <p>
+    In the first form the keys are strings, as you already know they could be any other kind of objects: integer, array and so forth. In the second form the strings are used as symbols. </br>
+    To add or modify items to either of these forms we can type:
+    </p>
+    music_implicit_form["2pac"] = "changes"
+    music_alternate_form[:2pac] = "changes"
+    <p>
+    To display values, we could also do it 2 ways:
+    </p>
+    puts music_implicit_form["Arcade Fire"]
+    puts music_implicit_form[:Arcade_Fire]]
+
+    // The well and the lighthouse
+    // The well and the lighthouse
+
+    <h3>The JavaScript object</h3>
+    <p>
+    Objects offer the same features in JavaScript. An object literal is a series of properties, keys in Ruby, and associated values of an object, enclosed in curly braces {}. Here is how it looks:
+    </p>
+    var music_alternate_form = {
+      michaelJackson: "Beat it",
+      arcadeFire: "The well and the lighthouse",
+      billyPaul: "Your song",
+      Drake: "Know yourself"
+    };
+    <p>
+    Notice here that an object is also a variable and always to be starte with 'var', also the closing curly brace must be followed by a semi-column. As stated earlier in the post: JavaScript is tough on syntax. </br>
+    Another important difference is that the keys can be any data type in Ruby, but this is not the case in JavaScript. In JS the properties are considered variables and must follow the required syntax.
+    </p>
+    <p>
+    To add properties to our JS object or display current values, we would go like this:
+    </p>
+    console.log(music_alternate_form.arcadeFire);
+    // The well and the lighthouse
+
+    music_alternate_form.arcadeFire = "In the backseat";
+    console.log(music_alternate_form.arcadeFire);
+    // In the backseat
+    <p>
+    Outside of syntax, objects and hashes have remarkably similar features, they can both be modified, printed and stored within a variable. They also feature built-in methods that make our life as developers easier, for more resource on that you should check out the <a href="" id="">Ruby Doc</a> and the <a href="developer.mozilla.org/en/JavaScript/Guide" id="">Mozilla Developer Network</a>. I hope this was useful, happy coding!
+    </p>
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+      <section id="footer">
+        <a href="https://twitter.com/gaelbergeron" target="_blank"><img src="../social-icons/twitter.png" id="twitter" width=60px height=60px /></a>
+        <a href="https://www.linkedin.com/in/gaelbergeron" target="_blank"><img src="../social-icons/linkedin.png" id="linkedin" width=60px height=60px /></a>
+        <a href="https://github.com/gaelbergeron" target="_blank"><img src="../social-icons/github.png" id="github" width=60px height=60px /></a>
+        <a href="https://instagram.com/gramgael/" target="_blank"><img src="../social-icons/instagram.png" id="instagram" width=60px height=60px /></a>
+        <a href="https://soundcloud.com/bergui" target="_blank"><img src="../social-icons/soundcloud.png" id="soundcloud" width=60px height=60px /></a>
+        <a href="mailto:gael.bergeron@gmail.com" target="_blank"><img src="../social-icons/email.png" id="email" width=60px height=60px /></a>
+      </section>
+  </body>
+</html>
