@@ -1,114 +1,153 @@
-html {
-	font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
-	background-color: #d5f4fa;
-}
-
 body {
-    overflow-x: hidden;
+  background-color: #e6f7f7;
+  width: 100%;
 }
 
-p {
-	font-weight: 400;
-	line-height: 1.5em;
+.bg {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+/*  background: linear-gradient(30deg, #0E0277 11%, #3B42A3 13%, transparent 13%), linear-gradient(-30deg, #0E0277 11%, #3B42A3 13%, transparent 13%), linear-gradient(150deg, #0E0277 11%, #3B42A3 13%, transparent 13%), linear-gradient(-150deg, #0E0277 11%, #3B42A3 13%, transparent 13%), linear-gradient(30deg, #0E0277 11%, #3B42A3 13%, transparent 13%), linear-gradient(-30deg, #0E0277 11%, #3B42A3 13%, transparent 13%), linear-gradient(150deg, #0E0277 11%, #3B42A3 13%, transparent 13%), linear-gradient(-150deg, #0E0277 11%, #3B42A3 13%, transparent 13%), linear-gradient(90deg, transparent 48%, #3B42A3 50%, transparent 52%, #0E0277 0), linear-gradient(90deg, transparent 48%, #3B42A3 50%, transparent 52%, #0E0277 0);
+*/  background-position: 0 0, 0 0, 0 0, 0 0, 40px 70px, 40px 70px, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  background-size: 80px 140px;
+  animation-name: bgFadeIn;
+  animation-duration: 4s;
+  animation-fill-mode: both;
 }
 
-h3 {
-	margin-top: 1em;
+.content {
+  margin: 5% 55%;
+  width: 626px;
+  height: 100%;
+  position: fixed;
+  animation-name: fadeInDown;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
 }
 
-.navbar {
-	font-size: 1.5em;
-	display: inline-block;
-}
-a {
-	color: black;
-	text-decoration: none;
-}
-#logo-button {
-	float: left;
-	margin-right: 4.5em;
-	font-size: 48px;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-#portfolio {
-	display: inline-block;
-	margin-right: 4em;
-	margin-bottom: 0.5em;
-	margin-top: 2em;
-}
-
-#blog {
-	margin-right: 4em;
-}
-
-#about-me {
-	margin-right: 4em;
-}
-#main-section {
-display: inline-block;
-}
-
-#description {
-  background-color: white;
-  float: left;
+.container {
+  text-align: center;
+  margin: 20px 20px 20px -162px;
   position: absolute;
-  width: 19em;
-  height: 30.25em;
-  top: 7.08em;
-  opacity: 0.7;
-  margin-left: -10px;
-  padding: 1em;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  transform: rotate(30deg);
+  transition: all 1s ease;
 }
 
-#picture {
-	max-width: 1500px;
-	margin-left: -10px;
+.container:hover {
+  opacity: 0.85;
 }
 
-#footer {
-	margin-top: 2em;
+.border-container {
+  transform: scale(1.05) rotate(30deg);
 }
 
-#twitter {
-	margin-right: 4.8em;
-}
-#linkedin {
-	margin-right: 4.8em;
-}
-#github {
-	margin-right: 4.8em;
-}
-#instagram {
-	margin-right: 4.8em;
-}
-#soundcloud {
-	margin-right: 4.8em;
+.hexagon {
+  height: 100%;
+  width: calc(100% * 0.5735);
+  display: inline-block;
+  background-color: #3B3AA3;
 }
 
-#young-gael {
-	position: relative;
+.hexagon-border {
+  height: 100%;
+  width: calc(100% * 0.5735);
+  display: inline-block;
+  background-color: #7271FF;
 }
 
-#about-me {
-	position: relative;
-	top: 0em;
-	bottom: 0em;
-	right: 0em;
-	left: 0em;
-	width: 100%;
+.hexagon:before {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(-60deg);
 }
 
-#main-about-me {
-	margin-right: 8em;
- 	margin-left: 8em; 
+.hexagon:after {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(60deg);
 }
 
-#smiirl {
-  position: relative;
-  left: 2em;
-  right: 0em;
-  top: 0em;
-  bottom: 0em;
+.hexagon span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 5px;
+  z-index: 2;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-size: 42px;
+  line-height: 200px;
+  font-weight: 300;
+  font-family: 'Alegreya Sans SC', 'Arial Narrow', sans-serif;
+  color: #FEFFFE;
+  transform: rotate(-30deg);
+}
+
+.tagline {
+  width: 100%;
+  top: 350px;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: -0.04em;
+  font-family: 'Alegreya Sans SC';
+  color: black;
+  position: fixed;
+  animation-name: fadeInUp;
+  animation-duration: 3s;
+  animation-delay: 4.5s;
+  animation-fill-mode: both;
+  margin: 0 2%;
+}
+
+@keyframes bgFadeIn {
+  from {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+  61% {
+    opacity: 0.8;
+    transform: scale3d(1.003, 1.003, 1.003);
+  }
+  80% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
 }

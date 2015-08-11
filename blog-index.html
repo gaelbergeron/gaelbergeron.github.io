@@ -2,51 +2,55 @@
 <html>
   <head>
 	<meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/homepage.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/blog-index.css">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
 
 	<title>g10n Blog Index</title>	
   </head>
+  
   <body>
-      <section class="navbar">
-        <a href="index.html" id="logo-button">g10n</a>
-        <a href="projects/index.html" id="portfolio">Portfolio</a>
-        <a href="blog-index.html" id="blog">Blog</a>
-        <a href="about-me.html" id="about-me">About me</a>
-      </section>
-      <section id="main-section">
-      	<div id="description">
-        <p>This is the blog, here I will mainly share posts of 2 kinds: technical and cultural.</p>
-        <p>So either technical stuff I will do my best to "vulgarize" or my own feelings going through Dev Bootcamp</p>
-        <p>Learning software development is a long journey of apprenticeship! To learn more you can click on the little icons below.</p></div>
-        <div id="placeholder"></div>
-        <div id="cultural-header">Cultural blog</div>
-          <div id="cultural-body">
-            <ol>
-              <li><a href="blog-posts/c1-chefs-kitchen.html" id="blog-link">Dev Bootcamp: the community, the culture, the experience</a></li>
-              <li><a href="blog-posts/c3-thinking-style.html" id="blog-link">A look at Gregorc Thinking Styles</a></li>
-              <li><a href="blog-posts/c4-tech-issues.html" id="blog-link">Women in tech: how to improve the industry</a></li>
-              <li><a href="blog-posts/c5-feedback.html" id="blog-link">Pairing and Giving Feedback at Dev Bootcamp</a></li>
-              <li><a href="blog-posts/c6-stereotype-threat.html" id="blog-link">The curse of stereotype threats</a></li>
-              <li><a href="blog-posts/c7-values.html" id="blog-link">True values</a></li>
-              <li><a href="blog-posts/c8-conflict.html" id="blog-link">Conflict at the workplace</a></li>
-            </ol>
-          </div>
-        <div id="technical-header">Technical blog</div>
-          <div id="technical-body">
-             <ol>
-              <li><a id="blog-link" href="blog-posts/t1-git-blog.html" >Version control with Git</a></li>
-              <li><a href="blog-posts/t2-css-design.html" id="blog-link">Relative, absolute and fixed: your CSS "ahah" moment</a></li>
-              <li><a href="blog-posts/t3-arrays-hashes.html" id="blog-link">Storing Data: arrays vs. hashes</a></li>
-              <li><a href="blog-posts/t4-enumerable-methods.html" id="blog-link">The cycle method in Ruby</a></li>
-              <li><a href="blog-posts/t5-ruby-classes.html" id="blog-link">A first look at Ruby classes</a></li>
-              <li><a href="blog-posts/t6-oop-concepts.html" id="blog-link">Blocs, procs and lambdas in Ruby</a></li>
-              <li><a href="blog-posts/t7-JavaScript.html" id="blog-link">Ruby vs. JavaScript: a first look at data structures</a></li>
-              <li><a href="blog-posts/cheat-sheet.html" id="blog-link">JavaScript objects manipulation cheat sheet</a></li>
-              <li><a href="blog-posts/t8-tech.html" id="blog-link">Development frameworks</a></li>
-            </ol>
-          </div>
-      </section>
+      <header>
+          <a href="index.html" id="logo">g10n</a>
+        <nav>
+          <ul>
+            <li class="nav-menu"><a href="projects/index.html">Portfolio</a></li>
+            <li class="nav-menu"><a href="blog-index.html">Blog</a></li>
+            <li class="nav-menu"><a href="about-me.html">About me</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <section id="main-section">
+      <div class="box">
+        <h3>Cultural blog: the DBC experience and beyond</h3>
+        <ol>
+          <li><a href="blog-posts/c1-chefs-kitchen.html">Dev Bootcamp: the community, the culture, the experience</a></li>
+          <li><a href="blog-posts/c3-thinking-style.html">A look at Gregorc Thinking Styles</a></li>
+          <li><a href="blog-posts/c4-tech-issues.html">Women in tech: how to improve the industry</a></li>
+          <li><a href="blog-posts/c5-feedback.html">Pairing and Giving Feedback at Dev Bootcamp</a></li>
+          <li><a href="blog-posts/c6-stereotype-threat.html">The curse of stereotype threats</a></li>
+          <li><a href="blog-posts/c7-values.html">True values</a></li>
+          <li><a href="blog-posts/c8-conflict.html">Conflict at the workplace</a></li>
+        </ol>
+      </div>
+
+      <div class="box">
+          <h3>Technical blog: trying to explain what I learn</h3>
+          <ol>
+            <li><a href="blog-posts/t1-git-blog.html">Version control with Git</a></li>
+            <li><a href="blog-posts/t2-css-design.html">Relative, absolute and fixed: your CSS "ahah" moment</a></li>
+            <li><a href="blog-posts/t3-arrays-hashes.html">Storing Data: arrays vs. hashes</a></li>
+            <li><a href="blog-posts/t4-enumerable-methods.html">The cycle method in Ruby</a></li>
+            <li><a href="blog-posts/t5-ruby-classes.html">A first look at Ruby classes</a></li>
+            <li><a href="blog-posts/t6-oop-concepts.html">Blocs, procs and lambdas in Ruby</a></li>
+            <li><a href="blog-posts/t7-JavaScript.html">Ruby vs. JavaScript: a first look at data structures</a></li>
+            <li><a href="blog-posts/cheat-sheet.html">JavaScript objects manipulation cheat sheet</a></li>
+            <li><a href="blog-posts/t8-tech.html">Development frameworks</a></li>
+          </ol>
+        </div>
+    </section>
+      
       <section id="footer">
         <a href="https://twitter.com/gaelbergeron" target="_blank"><img src="social-icons/twitter.png" id="twitter" width=60px height=60px /></a>
         <a href="https://www.linkedin.com/in/gaelbergeron" target="_blank"><img src="social-icons/linkedin.png" id="linkedin" width=60px height=60px /></a>
