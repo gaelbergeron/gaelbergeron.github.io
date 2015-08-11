@@ -80,3 +80,8 @@ p a:visited {
 p a:hover {
   color: black;
 }
+
+#footer-blog {
+  margin: 0 auto;
+  text-align: center;
+}
