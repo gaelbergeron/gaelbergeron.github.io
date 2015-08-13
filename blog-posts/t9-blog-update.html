@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/homepage.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css">
+  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+
+
+  
+	<title>g10n Blog Index</title>	
+  </head>
+  <body>
+
+  <header id="header-blog">
+      <a class="nav-blog" href="../index.html" id="logo">g10n</a>
+    <nav>
+      <ul>
+        <li class="nav-blog"><a class="nav-blog" href="../projects/index.html">Portfolio</a></li>
+        <li class="nav-blog"><a class="nav-blog" href="../blog-index.html">Blog</a></li>
+        <li class="nav-blog"><a class="nav-blog" href="../about-me.html">About me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main id="main-about-me">
+ <div id="placeholder"></div>
+  <h1>A fresh look at my website</h1>
+  <h2>Go ahead kid, have fun</h2>
+  <h4>August 12th, 2015</h4>
+
+  <section>
+    <p>For our last week at Phase 0, we were asked to update and improve our website by practicing our HTML/CSS skills. 2 ways were suggested, either implementing a framework in order to solidify our code, or improve upon existing code. Since I already had a few ideas on how to improve the design and overall UX of my website, I set out to work off my existing files.</p>
+    <p>I did a lot of designing tweaks that, overall, make the site simpler and easier to navigate. I was surprised how many improvement opportunities I was noticing after a few weeks of regular visits, this was rewarding in the sense that I’ve been developing an eye for web UX, whenever I see something cool or interesting I try to figure out how it is built using the Chrome dev tool. Here is a quick list of the tweaks I made:</p>
+    <ol>
+      <li class="li-blog">More neutral background color,</li>
+      <li class="li-blog">Simplification of the homepage and blog index page,</li>
+      <li class="li-blog">Improvement of the font setup for better readability,</li>
+      <li class="li-blog">Changed the color of the navigation bar for better contrast in certain pages,</li>
+    </ol>
+    <p>But the biggest item I’ve worked on is a new animated index page working as a welcome page. I did a bit of research and came across great examples on Codepen (link: codepen.com). I was able to bootstrap from open source code and had to learn a great deal about CSS media queries along the way. Media Query is a new feature in CSS3 that adds interaction and animations to a web page using CSS only. The animation is described in separate declarations using the code: <i>@keyframes animationName</i> and applied to the elements we want to animate, along with a few other parameters. Here is how it looks for one animation:</p>
+    <!-- HTML generated using hilite.me -->
+    <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.4em 0.4em 0.4em .4em;padding:.8em .8em;"><pre style="margin: 0; line-height: 125%"><span style="color: #a6e22e">.tagline</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">width</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">100</span><span style="color: #f92672">%</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">top</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">350px</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">text-align</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">center</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">font-size</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">22px</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">letter-spacing</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">-0.04em</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">font-family</span><span style="color: #f92672">:</span> <span style="color: #e6db74">&#39;Alegreya Sans SC&#39;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">color</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">black;</span>
+    <span style="color: #66d9ef">position</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">fixed</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">animation</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">name</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">fadeInUp;</span>
+    <span style="color: #f8f8f2">animation</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">duration</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">3s</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">animation</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">delay</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">4.5s</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">animation</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">fill</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">mode</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">both</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">margin</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">0</span> <span style="color: #ae81ff">2</span><span style="color: #f92672">%</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #66d9ef">@keyframes</span> <span style="color: #f92672">fadeInUp</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #f92672">from</span> <span style="color: #f8f8f2">{</span>
+      <span style="color: #66d9ef">opacity</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+      <span style="color: #f8f8f2">transform</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">translate3d(</span><span style="color: #ae81ff">0</span><span style="color: #f92672">,</span> <span style="color: #ae81ff">100</span><span style="color: #f92672">%,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">}</span>
+    <span style="color: #f92672">100%</span> <span style="color: #f8f8f2">{</span>
+      <span style="color: #66d9ef">opacity</span><span style="color: #f92672">:</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+      <span style="color: #f8f8f2">transform</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">none</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">}</span>
+    </pre></div>
+
+    <p>The overall experience was great, my next step will be to add more interactivity using JavaScript and JQuery. In the meantime, I really encourage you to spend time on Codepen, it’s full of amazing things!</p>
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+      <section id="footer-blog">
+        <a href="https://twitter.com/gaelbergeron" target="_blank"><img src="../social-icons/twitter.png" id="twitter" width=60px height=60px /></a>
+        <a href="https://www.linkedin.com/in/gaelbergeron" target="_blank"><img src="../social-icons/linkedin.png" id="linkedin" width=60px height=60px /></a>
+        <a href="https://github.com/gaelbergeron" target="_blank"><img src="../social-icons/github.png" id="github" width=60px height=60px /></a>
+        <a href="https://instagram.com/gramgael/" target="_blank"><img src="../social-icons/instagram.png" id="instagram" width=60px height=60px /></a>
+        <a href="https://soundcloud.com/bergui" target="_blank"><img src="../social-icons/soundcloud.png" id="soundcloud" width=60px height=60px /></a>
+        <a href="mailto:gael.bergeron@gmail.com" target="_blank"><img src="../social-icons/email.png" id="email" width=60px height=60px /></a>
+      </section>
+  </body>
+</html>
